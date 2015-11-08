@@ -1,0 +1,9 @@
+h1 {
+	color: green;
+}
+#myCanvas {
+	border: 2px solid;
+	border-color: purple;
+	background-color: #00C4FF;
+
+}
