@@ -1,6 +1,4 @@
 
-/*
-
 var c = document.getElementById("canvas1");
 var context = c.getContext("2d");
 
@@ -46,27 +44,22 @@ context.stroke();
 context.moveTo(185, 168);
 context.lineTo(168, 185);
 context.stroke();
-*/
-//Make the car move
-
 
 var x=10; //Car position
 
-//Repeat the drawing a bunch of times; at this point I think I need a timeout of some sort to clear the background
+//toggle the while on an of to see the car moving
 /*
-//Toggle the while on an off to move the car
-
-
-while(x<100) {
+while(x<200) {
 */
 var draw = function() {
 
-
 //Draw the car
+
 var canvas2 = document.getElementById("canvas2");
 var context2 = canvas2.getContext("2d");
 
-
+context2.fillStyle="pink";
+context2.fillRect(0, 0, canvas2.width, canvas2.height);
 	//build the body
 	context2.fillStyle="red";
 	context2.fillRect(x+40, 40, 120, 50);
@@ -79,13 +72,13 @@ var context2 = canvas2.getContext("2d");
 	context2.arc(x+40, 140, 20, 30, 50);
 	context2.arc(x+170, 140, 20, 30, 50);
 	context2.fill();
-	x=x+2;
+	x++;
 };
 draw();
+//toggle the while on an of to see the car moving
 /*
-//Toggle the while on an off to move the car
 }
-/*
+*/
 //Draw the grass and sun in the sky
 
 var canvas3 = document.getElementById("canvas3");
@@ -106,5 +99,3 @@ context3.arc(200, 40, 30, 0, 2*Math.PI);
 context3.stroke();
 context3.fill();
 
-
-*/
